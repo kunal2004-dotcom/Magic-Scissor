@@ -1,0 +1,1134 @@
+/* ==========================================================================
+   MAGIC SCISSORS - RESPONSIVE & MOBILE STYLING
+   ========================================================================== */
+
+/* Tablet & Mobile Header Navigation (Up to 1100px) */
+@media (max-width: 1100px) {
+  .site-header nav,
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .header-tel-btn {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex !important;
+    z-index: 920;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  /* Show ✕ close button inside drawer on mobile */
+  .nav-drawer-close {
+    display: flex;
+    min-width: 44px;
+    min-height: 44px;
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .stat-item:nth-child(2n) {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-main-img {
+    height: 380px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .service-card.featured {
+    grid-column: span 2;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .gallery-card.featured {
+    grid-column: span 2;
+  }
+
+  .standards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .packages-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .footer-grid,
+  .footer-top-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 32px;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Booking grids: collapse at tablet */
+
+  .booking-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .booking-form-col {
+    order: -1;
+  }
+
+  .booking-info-col {
+    order: 2;
+  }
+}
+
+/* ==========================================================================
+   Mobile & Phone Screens (max-width: 768px)
+   - Zero changes to laptop (> 768px)
+   - Eliminates floating button overlaps, text squishing, and horizontal overflow
+   ========================================================================== */
+@media (max-width: 768px) {
+
+  /* Prevent horizontal screen wobble on mobile */
+  html,
+  body {
+    overflow-x: hidden !important;
+    max-width: 100vw;
+  }
+
+  .container {
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  .section-padding {
+    padding: clamp(45px, 8vw, 65px) 0;
+  }
+
+  .section-title {
+    font-size: clamp(1.85rem, 6.2vw, 2.45rem);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .section-subtitle {
+    font-size: 0.94rem;
+    line-height: 1.65;
+    margin-bottom: 30px;
+  }
+
+  .page-hero-banner {
+    padding: 95px 0 45px;
+  }
+
+  .page-hero-title {
+    font-size: clamp(1.9rem, 6.5vw, 2.6rem);
+    margin-bottom: 10px;
+  }
+
+  .page-hero-subtitle {
+    font-size: 0.94rem;
+  }
+
+  /* --------------------------------------------------------------------------
+     1. Header: Sleek, non-wrapping single line on phone
+     -------------------------------------------------------------------------- */
+  .site-header {
+    padding-top: max(8px, var(--sat));
+    padding-bottom: 8px;
+  }
+
+  .site-header.scrolled {
+    padding-top: max(6px, var(--sat));
+    padding-bottom: 6px;
+  }
+
+  .header-inner {
+    padding: 0 14px;
+    gap: 8px;
+  }
+
+  .logo-scissor-mark {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+
+  .logo-title {
+    font-size: 0.92rem;
+    letter-spacing: 0.03em;
+  }
+
+  .logo-sub {
+    font-size: 0.48rem;
+    letter-spacing: 0.16em;
+  }
+
+  .header-tel-btn {
+    display: none !important;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .header-actions .btn-gold {
+    padding: 6px 12px;
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .mobile-menu-btn {
+    font-size: 24px;
+    padding: 4px;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    width: 280px;
+    max-width: 85vw;
+  }
+
+  /* Drawer Mobile Rules */
+  .nav-drawer {
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding-top: max(16px, var(--sat));
+    padding-bottom: max(24px, calc(16px + var(--sab)));
+    padding-left: max(16px, var(--sal));
+    padding-right: max(16px, var(--sar));
+  }
+
+  .nav-drawer-close {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 20px;
+  }
+
+  .drawer-nav-link {
+    min-height: 44px;
+    padding: 11px 16px;
+  }
+
+  .drawer-btn {
+    min-height: 44px;
+    padding: 11px 14px;
+    font-size: clamp(0.80rem, 3.6vw, 0.90rem);
+  }
+
+  /* --------------------------------------------------------------------------
+     2. Hero Section & Content Card: Fully visible, no overlap, crisp spacing
+     -------------------------------------------------------------------------- */
+  .hero-section {
+    min-height: auto;
+    padding-top: clamp(76px, 11vh, 90px);
+    padding-bottom: 35px;
+  }
+
+  .hero-content {
+    padding: clamp(16px, 4vw, 24px);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .hero-badge-pill {
+    padding: 5px 12px;
+    font-size: clamp(0.66rem, 2.5vw, 0.74rem);
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  .hero-headline {
+    font-size: clamp(1.45rem, 5.2vw, 2.15rem);
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    margin-bottom: 14px;
+    word-break: normal;
+  }
+
+  .hero-line-nowrap {
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .hero-description {
+    font-size: 0.88rem;
+    line-height: 1.62;
+    margin-bottom: 18px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 0.85rem;
+    min-height: 44px;
+    justify-content: center;
+  }
+
+  .hero-stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 10px;
+    padding: 14px 12px;
+    border-radius: 14px;
+  }
+
+  .stat-item {
+    min-width: 0;
+  }
+
+  .stat-item:not(:last-child) {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
+
+  .stat-label {
+    font-size: 0.74rem;
+    font-weight: 700;
+  }
+
+  .stat-sub {
+    font-size: 0.68rem;
+  }
+
+  /* --------------------------------------------------------------------------
+     3. Services Tabs & Cards on Phone
+     -------------------------------------------------------------------------- */
+  .services-tabs {
+    border-radius: var(--radius-full);
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 6px 8px;
+    gap: 8px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: flex-start;
+  }
+
+  .services-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-tab-btn {
+    padding: 9px 16px;
+    font-size: 0.80rem;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Fix: Override desktop :has() adaptive grids on mobile */
+  .services-grid,
+  .services-grid:has(> .service-card:only-child),
+  .services-grid:has(> .service-card:first-child:nth-last-child(2)) {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    justify-content: stretch;
+  }
+
+  .service-card.featured {
+    grid-column: span 1;
+    flex-direction: column;
+  }
+
+  .service-card.featured .service-card-media {
+    width: 100%;
+    height: clamp(195px, 52vw, 235px);
+    min-height: unset;
+  }
+
+  .service-card.featured .service-card-body {
+    width: 100%;
+    padding: 18px 16px;
+  }
+
+  .service-card.featured .service-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+
+  .service-card.featured .service-card-desc {
+    font-size: 0.88rem;
+    margin-bottom: 14px;
+    -webkit-line-clamp: 3;
+  }
+
+  .service-card-media {
+    height: clamp(195px, 52vw, 235px);
+  }
+
+  .service-card-tag {
+    top: 8px;
+    left: 8px;
+    padding: 2.5px 7px;
+    font-size: 0.58rem;
+    letter-spacing: 0.03em;
+  }
+
+  .service-card-body {
+    padding: 18px 16px;
+  }
+
+  .service-card-title {
+    font-size: 1.25rem;
+  }
+
+  .service-card-desc {
+    font-size: 0.88rem;
+    margin-bottom: 14px;
+  }
+
+  /* --------------------------------------------------------------------------
+     4. About & Gallery Grids
+     -------------------------------------------------------------------------- */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-main-img {
+    height: clamp(220px, 60vw, 320px);
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .about-feature-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 22px 0 24px;
+  }
+
+  .about-float-badge {
+    position: static;
+    margin-top: 14px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .team-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  /* Fix: Override desktop gallery :has() adaptive grids on mobile */
+  .gallery-grid,
+  .gallery-grid:has(> .gallery-card:only-child),
+  .gallery-grid:has(> .gallery-card:first-child:nth-last-child(2)),
+  .gallery-grid:has(> .gallery-card:first-child:nth-last-child(3)) {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    justify-content: stretch;
+  }
+
+  .gallery-card,
+  .gallery-card.featured {
+    grid-column: span 1;
+    height: clamp(230px, 62vw, 290px);
+  }
+
+  .gallery-overlay {
+    padding: 26px 16px 14px 16px;
+  }
+
+  .gallery-title {
+    font-size: 1.1rem;
+  }
+
+  .standards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* --------------------------------------------------------------------------
+     5. Packages & Testimonials
+     -------------------------------------------------------------------------- */
+  .packages-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .package-card {
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  .package-card.highlighted {
+    transform: none;
+  }
+
+  .package-card:hover {
+    transform: none;
+  }
+
+  .package-price-val {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 18px;
+  }
+
+  .testimonial-card {
+    padding: 22px 18px;
+  }
+
+  .testimonial-quote {
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+  }
+
+
+
+  /* --------------------------------------------------------------------------
+     6. Video Tour, Instagram Strip & Footer
+     -------------------------------------------------------------------------- */
+  .video-ctrl-btn {
+    width: 42px;
+    height: 42px;
+    bottom: 14px;
+  }
+
+  .video-ctrl-play {
+    left: 14px;
+  }
+
+  .video-ctrl-mute {
+    right: 14px;
+  }
+
+  .video-ctrl-icon {
+    width: 19px;
+    height: 19px;
+  }
+
+  .instagram-banner-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 24px 20px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .insta-banner-info {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .insta-banner-title {
+    font-size: clamp(1.3rem, 4.5vw, 1.8rem);
+    text-align: center;
+  }
+
+  .insta-banner-handle {
+    font-size: clamp(0.85rem, 3.2vw, 1.05rem);
+    text-align: center;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .insta-cta-btn {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .insta-tile:last-child:nth-child(odd) {
+    grid-column: span 2;
+    max-height: 200px;
+  }
+
+  .site-footer {
+    padding-top: 48px;
+    padding-bottom: max(25px, calc(20px + var(--sab)));
+    padding-left: max(0px, var(--sal));
+    padding-right: max(0px, var(--sar));
+  }
+
+  .footer-grid,
+  .footer-top-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 20px;
+    margin-bottom: 36px;
+  }
+
+  .footer-col-brand {
+    grid-column: 1 / -1;
+    border-bottom: 1px solid rgba(184, 107, 73, 0.16);
+    padding-bottom: 24px;
+    margin-bottom: 4px;
+  }
+
+  .footer-col-nav {
+    grid-column: 1;
+  }
+
+  .footer-col-hours {
+    grid-column: 2;
+  }
+
+  .footer-col-concierge {
+    grid-column: 1 / -1;
+    border-top: 1px solid rgba(184, 107, 73, 0.16);
+    padding-top: 24px;
+    margin-top: 4px;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .footer-social-link {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 580px) {
+    .footer-grid,
+    .footer-top-grid {
+      grid-template-columns: 1fr;
+      gap: 26px;
+    }
+
+    .footer-col-nav,
+    .footer-col-hours {
+      grid-column: 1 / -1;
+    }
+
+    .footer-col-hours {
+      border-top: 1px solid rgba(184, 107, 73, 0.14);
+      padding-top: 22px;
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     7. Forms (Booking, Contact): iOS Auto-Zoom Prevention & Stacking
+     -------------------------------------------------------------------------- */
+  .booking-layout-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .booking-form-col {
+    order: -1;
+  }
+
+  .booking-info-col {
+    order: 2;
+  }
+
+  .luxury-form-two-col {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .luxury-form-card,
+  .inquiry-card,
+  .studio-info-card {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+
+  /* Studio Location Card (Map/Directions Showcase Box) */
+  .studio-location-section {
+    padding: clamp(36px, 6vw, 55px) 0;
+  }
+
+  .studio-location-card {
+    margin: 0 4px;
+    border-radius: var(--radius-md);
+  }
+
+  .studio-location-inner {
+    padding: 34px 18px 36px;
+    min-height: auto;
+  }
+
+  .studio-location-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .studio-location-title {
+    font-size: clamp(1.3rem, 5vw, 1.6rem);
+    margin-bottom: 8px;
+  }
+
+  .studio-location-address {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 22px;
+    padding: 0 4px;
+  }
+
+  .studio-location-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    gap: 11px;
+    margin: 0 auto;
+  }
+
+  .studio-location-actions .btn {
+    width: 100%;
+    padding: 13px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .luxury-form-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  input,
+  select,
+  textarea,
+  .luxury-input,
+  .luxury-select,
+  .luxury-textarea {
+    font-size: 16px !important;
+    /* Critical for iOS Safari auto-zoom prevention */
+    padding: 11px 14px;
+    min-height: 46px;
+  }
+
+  .luxury-actions-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .luxury-actions-row .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  .studio-contact-item {
+    gap: 12px;
+  }
+
+  .studio-icon-badge {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+
+  .studio-contact-detail h4 {
+    font-size: 0.90rem;
+  }
+
+  .studio-contact-detail p {
+    font-size: 0.84rem;
+  }
+
+  /* --------------------------------------------------------------------------
+     8. Modals, Concierge Drawer & Lightbox on Phone
+     -------------------------------------------------------------------------- */
+  .modal-overlay {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-container {
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100vh - 20px);
+    max-height: calc(100dvh - 20px);
+    border-radius: 16px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .modal-body {
+    padding: 18px 14px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+  }
+
+  .modal-banner-wrap {
+    height: clamp(160px, 42vw, 220px) !important;
+    flex-shrink: 0;
+  }
+
+  .modal-banner-image {
+    height: 100% !important;
+    object-fit: cover;
+  }
+
+  .modal-close-btn {
+    top: 10px;
+    right: 10px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 18px;
+    z-index: 25;
+    background: rgba(15, 17, 23, 0.75);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .modal-header-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .modal-title {
+    font-size: 1.45rem;
+  }
+
+  .modal-price-pill {
+    font-size: 0.95rem;
+    padding: 6px 14px;
+  }
+
+  .modal-actions-footer {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 16px;
+  }
+
+  .modal-actions-footer .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  /* Concierge Drawer Mobile Viewport */
+  .concierge-drawer-overlay {
+    z-index: 10050;
+  }
+
+  .concierge-drawer {
+    width: 100%;
+    max-width: 100vw;
+    padding: 20px 14px;
+  }
+
+  #conciergeCloseBtn {
+    min-width: 44px;
+    min-height: 44px;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Gallery Lightbox Mobile Viewport */
+  #galleryLightbox .modal-container {
+    max-width: 95vw;
+    max-height: 88vh;
+    max-height: 88dvh;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #galleryLightbox .lightbox-img {
+    max-height: 55vh;
+    max-height: 55dvh;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  /* Zero padding at bottom of page - bottom bar removed */
+  body {
+    padding-bottom: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   Small Phones (max-width: 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+  .luxury-form-two-col {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .hero-headline {
+    font-size: clamp(1.35rem, 5.2vw, 1.75rem);
+    line-height: 1.18;
+    word-break: normal;
+  }
+
+  .hero-stats-strip {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 8px;
+    padding: 12px 10px;
+  }
+
+  .stat-value {
+    font-size: 1.35rem;
+  }
+
+  .stat-label {
+    font-size: 0.70rem;
+  }
+
+  .stat-sub {
+    font-size: 0.64rem;
+  }
+
+  .header-actions .btn-gold {
+    padding: 6px 10px;
+    font-size: 0.68rem;
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .mobile-quick-btn {
+    font-size: 0.70rem;
+    padding: 8px 4px;
+    gap: 3px;
+    min-height: 44px;
+  }
+
+  .instagram-banner-box {
+    padding: 22px 16px;
+    gap: 16px;
+    border-radius: 14px;
+  }
+
+  .insta-cta-btn {
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 14px;
+    width: 100%;
+    max-width: 290px;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .insta-cta-text {
+    flex-direction: column;
+    gap: 2px;
+    text-align: center;
+  }
+
+  .insta-cta-action {
+    font-size: 0.82rem;
+  }
+
+  .insta-cta-handle {
+    font-size: clamp(0.72rem, 3.2vw, 0.82rem);
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+/* ==========================================================================
+   Ultra-Compact Phones (max-width: 360px - e.g. iPhone SE 1st gen, Galaxy Fold)
+   ========================================================================== */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .hero-content {
+    padding: 14px 12px;
+    border-radius: 16px;
+  }
+
+  .hero-headline {
+    font-size: clamp(1.22rem, 4.8vw, 1.5rem);
+  }
+
+  .hero-line-nowrap {
+    white-space: normal;
+    display: inline;
+  }
+
+  .hero-stats-strip {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 6px;
+    padding: 10px 8px;
+  }
+
+  .stat-value {
+    font-size: 1.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.66rem;
+  }
+
+  .stat-sub {
+    font-size: 0.60rem;
+  }
+
+  .drawer-btn {
+    padding: 10px 10px;
+    font-size: 0.78rem;
+    gap: 6px;
+  }
+
+  .luxury-form-card,
+  .inquiry-card,
+  .studio-info-card {
+    padding: 16px 12px;
+  }
+
+  .service-tab-btn {
+    padding: 8px 12px;
+    font-size: 0.76rem;
+  }
+
+  .instagram-banner-box {
+    padding: 18px 12px;
+    gap: 14px;
+  }
+
+  .insta-banner-title {
+    font-size: 1.25rem;
+  }
+
+  .insta-banner-handle {
+    font-size: 0.82rem;
+  }
+
+  .insta-cta-btn {
+    padding: 10px 10px;
+    max-width: 100%;
+  }
+
+  .insta-cta-handle {
+    font-size: 0.70rem;
+  }
+
+  .video-ctrl-btn {
+    width: 40px;
+    height: 40px;
+    bottom: 12px;
+  }
+
+  .video-ctrl-play {
+    left: 12px;
+  }
+
+  .video-ctrl-mute {
+    right: 12px;
+  }
+
+  .video-ctrl-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* ==========================================================================
+   Reduced Motion Accessibility
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
